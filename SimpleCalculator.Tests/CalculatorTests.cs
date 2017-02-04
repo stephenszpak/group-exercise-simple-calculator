@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace SimpleCalculator.Tests
 {
     [TestClass]
-    public class MathEquationTests
+    public class CalculatorTests
     {
         [TestMethod]
         public void TestInstance()
