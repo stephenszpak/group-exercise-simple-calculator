@@ -37,6 +37,16 @@ namespace SimpleCalculator.Tests
 
         }
         [TestMethod]
+        public void multiplyTest()
+        {
+            Calculator multiply = new Calculator();
+
+            int expectedResult = 16;
+            int actualResult = multiply.Multiply(2, 8);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+        [TestMethod]
         public void divideTest()
         {
             Calculator calcDivide = new Calculator();
