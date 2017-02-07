@@ -10,9 +10,9 @@ namespace SimpleCalculator
     public class Expression
     {
 
-        string testPattern = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
+        string testPattern = @"^\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
 
-        public void StringSplitter (string UserInput)
+        public void StringSplitter(string UserInput)
         {
             Regex Regex = new Regex(testPattern);
 
@@ -24,6 +24,8 @@ namespace SimpleCalculator
             else
             {
                 Console.WriteLine("input is invalid");
+            }
+        }
 
         private readonly object opr;
 
@@ -73,7 +75,7 @@ namespace SimpleCalculator
 
         public void VerifyExpression(string userInput)
         {
-            string expressionString = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
+            string expressionString = @"^\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
             Regex regExString = new Regex(expressionString);
 
             Match match = regExString.Match(userInput);

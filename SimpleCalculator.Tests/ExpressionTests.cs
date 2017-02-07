@@ -14,13 +14,13 @@ namespace SimpleCalculator.Tests
             Expression expression = new Expression();
             Assert.IsNotNull(expression);
         }
-/*
+
         [TestMethod]
 
         public void CanCheckInput()
         {
             Expression testExpression = new Expression();
-            string testPattern = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
+            string testPattern = @"^\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
             Regex Regex = new Regex(testPattern);
 
             string test1 = "1+1";
@@ -29,5 +29,6 @@ namespace SimpleCalculator.Tests
 
             Assert.IsTrue(Regex.IsMatch(test1));
             Assert.IsTrue(Regex.IsMatch(test2));
+        }
     }
 }
