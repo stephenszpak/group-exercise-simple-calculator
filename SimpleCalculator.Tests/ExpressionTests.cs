@@ -14,10 +14,10 @@ namespace SimpleCalculator.Tests
             Expression expression = new Expression();
             Assert.IsNotNull(expression);
         }
-/*
-        [TestMethod]
 
+        [TestMethod]
         public void CanCheckInput()
+
         {
             Expression testExpression = new Expression();
             string testPattern = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
