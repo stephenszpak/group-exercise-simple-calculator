@@ -29,5 +29,6 @@ namespace SimpleCalculator.Tests
 
             Assert.IsTrue(Regex.IsMatch(test1));
             Assert.IsTrue(Regex.IsMatch(test2));
+        }
     }
 }
