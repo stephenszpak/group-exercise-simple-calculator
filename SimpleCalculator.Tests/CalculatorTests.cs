@@ -5,6 +5,7 @@ namespace SimpleCalculator.Tests
 {
     [TestClass]
     public class CalculatorTests
+
     {
         [TestMethod]
         public void TestInstance()
