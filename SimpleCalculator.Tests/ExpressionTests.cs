@@ -16,10 +16,18 @@ namespace SimpleCalculator.Tests
         }
 
         [TestMethod]
-        public void RegExTests()
-        {
-            Expression expression = new Expression();
+        public void CanCheckInput()
 
-        }
+        {
+            Expression testExpression = new Expression();
+            string testPattern = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
+            Regex Regex = new Regex(testPattern);
+
+            string test1 = "1+1";
+            string test2 = "2 + 2";
+
+
+            Assert.IsTrue(Regex.IsMatch(test1));
+            Assert.IsTrue(Regex.IsMatch(test2));
     }
 }
