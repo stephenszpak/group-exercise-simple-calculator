@@ -11,14 +11,40 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
+
             int counter = 0;
-            Console.Write($"[{counter}>]");
-
-            string Command = Console.ReadLine();
-            
+            Console.Write($"[{counter}]> ");
 
 
-
+        public void MathEquations(int firstNum, int secondNum, char opr)
+        {
+            if (opr == '+')
+            {
+                Calculator addNum = new Calculator();
+                addNum.Add(firstNum, secondNum);
+            }
+            else if (opr == '-')
+            {
+                Calculator subtractNum = new Calculator();
+                subtractNum.Subtract(firstNum, secondNum);
+            }
+            else if (opr == '*')
+            {
+                Calculator multiplyNum = new Calculator();
+                multiplyNum.Multiply(firstNum, secondNum);
+            }
+            else if (opr == '/')
+            {
+                Calculator divideNum = new Calculator();
+                divideNum.Divide(firstNum, secondNum);
+            }
+            else if (opr == '%')
+            {
+                Calculator modNum = new Calculator();
+                modNum.Modulus(firstNum, secondNum);
+            }
         }
+
+
     }
 }
