@@ -14,16 +14,11 @@ namespace SimpleCalculator.Tests
             Expression expression = new Expression();
             Assert.IsNotNull(expression);
         }
-/*
-        [TestMethod]
-        public void checkRegex()
-        {
-            Expression expression = new Expression();
 
-            string expectedResult = "Success";
-            string expressionString = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
-            expression.VerifyExpression("5+5");
+        [TestClass]
+        public class MathTests
+        {
+
         }
-        */
     }
 }

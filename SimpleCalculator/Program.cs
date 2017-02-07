@@ -11,40 +11,52 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
+            int counter = 1;
 
-            int counter = 0;
-            Console.Write($"[{counter}]> ");
+            while (true)
+            {
+                Console.Write($"[{counter}]> ");
 
+                string Command = Console.ReadLine();
 
-        public void MathEquations(int firstNum, int secondNum, char opr)
-        {
-            if (opr == '+')
-            {
-                Calculator addNum = new Calculator();
-                addNum.Add(firstNum, secondNum);
-            }
-            else if (opr == '-')
-            {
-                Calculator subtractNum = new Calculator();
-                subtractNum.Subtract(firstNum, secondNum);
-            }
-            else if (opr == '*')
-            {
-                Calculator multiplyNum = new Calculator();
-                multiplyNum.Multiply(firstNum, secondNum);
-            }
-            else if (opr == '/')
-            {
-                Calculator divideNum = new Calculator();
-                divideNum.Divide(firstNum, secondNum);
-            }
-            else if (opr == '%')
-            {
-                Calculator modNum = new Calculator();
-                modNum.Modulus(firstNum, secondNum);
+                Expression expression = new Expression();
+                expression.VerifyExpression(Command);
+                int firstNum = expression.FirstNum;
+                int secondNum = expression.SecondNum;
+                string Operator = expression.Operator;
+
+                switch (Operator)
+                {
+                    case "+":
+                        Calculator addNumbers = new Calculator();
+                        Console.WriteLine("   = " + addNumbers.Add(firstNum, secondNum));
+                        break;
+
+                    case "-":
+                        Calculator subtractNumbers = new Calculator();
+                        Console.WriteLine("   = " + subtractNumbers.Subtract(firstNum, secondNum));
+                        break;
+
+                    case "*":
+                        Calculator multiplyNumbers = new Calculator();
+                        Console.WriteLine("   = " + multiplyNumbers.Multiply(firstNum, secondNum));
+                        break;
+
+                    case "/":
+                        Calculator divideNumbers = new Calculator();
+                        Console.WriteLine("   = " + divideNumbers.Divide(firstNum, secondNum));
+                        break;
+
+                    case "%":
+                        Calculator modulusNumbers = new Calculator();
+                        Console.WriteLine("   = " + modulusNumbers.Modulus(firstNum, secondNum));
+                        break;
+
+                    default:
+                        break;
+                }
+                counter++;
             }
         }
-
-
     }
 }
