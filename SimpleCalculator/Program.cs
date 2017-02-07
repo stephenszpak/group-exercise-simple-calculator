@@ -28,28 +28,28 @@ namespace SimpleCalculator
                 switch (Operator)
                 {
                     case "+":
-                        Calculator addNumbers = new Calculator();
-                        Console.WriteLine("   = " + addNumbers.Add(firstNum, secondNum));
+                        Calculator calcAdd = new Calculator();
+                        Console.WriteLine("   = " + calcAdd.Add(firstNum, secondNum));
                         break;
 
                     case "-":
-                        Calculator subtractNumbers = new Calculator();
-                        Console.WriteLine("   = " + subtractNumbers.Subtract(firstNum, secondNum));
+                        Calculator calcSubtract = new Calculator();
+                        Console.WriteLine("   = " + calcSubtract.Subtract(firstNum, secondNum));
                         break;
-
+                            
                     case "*":
-                        Calculator multiplyNumbers = new Calculator();
-                        Console.WriteLine("   = " + multiplyNumbers.Multiply(firstNum, secondNum));
+                        Calculator calcMultiply = new Calculator();
+                        Console.WriteLine("   = " + calcMultiply.Multiply(firstNum, secondNum));
                         break;
 
                     case "/":
-                        Calculator divideNumbers = new Calculator();
-                        Console.WriteLine("   = " + divideNumbers.Divide(firstNum, secondNum));
+                        Calculator calcDivide = new Calculator();
+                        Console.WriteLine("   = " + calcDivide.Divide(firstNum, secondNum));
                         break;
 
                     case "%":
-                        Calculator modulusNumbers = new Calculator();
-                        Console.WriteLine("   = " + modulusNumbers.Modulus(firstNum, secondNum));
+                        Calculator calcModulus = new Calculator();
+                        Console.WriteLine("   = " + calcModulus.Modulus(firstNum, secondNum));
                         break;
 
                     default:

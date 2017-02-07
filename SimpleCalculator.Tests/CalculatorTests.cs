@@ -41,7 +41,7 @@ namespace SimpleCalculator.Tests
             Calculator multiply = new Calculator();
 
             int expectedResult = 16;
-            int actualResult = multiply.Multiply(8, 2);
+            int actualResult = multiply.Multiply(2, 8);
 
             Assert.AreEqual(expectedResult, actualResult);
         }
