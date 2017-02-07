@@ -15,9 +15,10 @@ namespace SimpleCalculator.Tests
             Assert.IsNotNull(expression);
         }
 
-        [TestClass]
-        public class MathTests
+        [TestMethod]
+        public void RegExTests()
         {
+            Expression expression = new Expression();
 
         }
     }

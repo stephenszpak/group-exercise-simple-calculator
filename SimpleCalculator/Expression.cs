@@ -9,7 +9,6 @@ namespace SimpleCalculator
 {
     public class Expression
     {
-      
         public string Operator { get; set; }
         public int FirstNum { get; set; }
         public int SecondNum { get; set; }
