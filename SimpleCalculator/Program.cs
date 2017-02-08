@@ -12,10 +12,11 @@ namespace SimpleCalculator
         static void Main(string[] args)
         {
             int counter = 1;
+            StackStorage mathStack = new StackStorage();
 
             while (true)
             {
-                Console.WriteLine("Welcome, type 'exit' or 'quit' when done doin maths to close application!")
+                Console.WriteLine("Welcome, type 'exit' or 'quit' when done with maths to close application!");
                 Console.Write($"[{counter}]> ");
 
                 string Command = Console.ReadLine();
@@ -30,7 +31,12 @@ namespace SimpleCalculator
                 int firstNum = expression.FirstNum;
                 int secondNum = expression.SecondNum;
                 string Operator = expression.Operator;
-
+                /*
+                if(firstNum != 0 && Operator != null && secondNum != 0)
+                {
+                    mathStack.addMathToStack((firstNum + Operator + secondNum).ToString();
+                }
+                */
                 switch (Operator)
                 {
                     case "+":
