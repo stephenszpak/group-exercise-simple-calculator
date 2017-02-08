@@ -21,10 +21,10 @@ namespace SimpleCalculator
             Stack.Push(addedMathProblem);
         }
 
-        public void getLastMathProblem(string math)
+        public string getLastProblem()
         {
-
+            string getLast = Stack.Peek().ToString();
+            return getLast;
         }
-
     }
 }

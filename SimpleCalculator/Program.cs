@@ -16,7 +16,6 @@ namespace SimpleCalculator
 
             while (true)
             {
-                Console.WriteLine("Welcome, type 'exit' or 'quit' when done with maths to close application!");
                 Console.Write($"[{counter}]> ");
 
                 string Command = Console.ReadLine();
@@ -25,18 +24,23 @@ namespace SimpleCalculator
                 {
                     Environment.Exit(0);
                 }
+                else if ( Command == "last")
+                {
+                    Command = mathStack.getLastProblem();
+                }
+                else if (Command == "lastq")
+                {
+                    Console.WriteLine("last problem was " + mathStack.getLastProblem());
+                }
 
                 Expression expression = new Expression();
                 expression.VerifyExpression(Command);
                 int firstNum = expression.FirstNum;
                 int secondNum = expression.SecondNum;
                 string Operator = expression.Operator;
-                /*
-                if(firstNum != 0 && Operator != null && secondNum != 0)
-                {
-                    mathStack.addMathToStack((firstNum + Operator + secondNum).ToString();
-                }
-                */
+   
+                mathStack.addMathToStack((firstNum + Operator + secondNum).ToString());
+          
                 switch (Operator)
                 {
                     case "+":
