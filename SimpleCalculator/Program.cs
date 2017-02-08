@@ -15,9 +15,15 @@ namespace SimpleCalculator
 
             while (true)
             {
+                Console.WriteLine("Welcome, type 'exit' or 'quit' when done doin maths to close application!")
                 Console.Write($"[{counter}]> ");
 
                 string Command = Console.ReadLine();
+
+                if (Command.ToLower() == "quit" || Command.ToLower() == "exit")
+                {
+                    Environment.Exit(0);
+                }
 
                 Expression expression = new Expression();
                 expression.VerifyExpression(Command);
