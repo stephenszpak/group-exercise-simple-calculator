@@ -39,9 +39,11 @@ namespace SimpleCalculator
                 int firstNum = expression.FirstNum;
                 int secondNum = expression.SecondNum;
                 string Operator = expression.Operator;
-                
+
+                string userMathExpression = (firstNum + Operator + secondNum).ToString();
+
                 //adds the user input into addMathToStack and makes it a string
-                mathStack.addMathToStack((firstNum + Operator + secondNum).ToString());
+                mathStack.addMathToStack(userMathExpression);
                 
                 //switch statement for calculations
                 switch (Operator)
