@@ -12,14 +12,7 @@ namespace SimpleCalculator
         public string Operator { get; set; }
         public int FirstNum { get; set; }
         public int SecondNum { get; set; }
-        
-        public Expression()
-        {
-            FirstNum = 0;
-            SecondNum = 0;
-            Operator = null;
-        }
-
+    
         public void VerifyExpression(string userInput)
         {
             string expressionString = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";

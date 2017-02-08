@@ -32,15 +32,18 @@ namespace SimpleCalculator
                 {
                     Console.WriteLine("last problem was " + mathStack.getLastProblem());
                 }
-
+                
+                //initalize regex expression
                 Expression expression = new Expression();
                 expression.VerifyExpression(Command);
                 int firstNum = expression.FirstNum;
                 int secondNum = expression.SecondNum;
                 string Operator = expression.Operator;
-   
+                
+                //adds the user input into addMathToStack and makes it a string
                 mathStack.addMathToStack((firstNum + Operator + secondNum).ToString());
-          
+                
+                //switch statement for calculations
                 switch (Operator)
                 {
                     case "+":
