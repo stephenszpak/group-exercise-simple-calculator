@@ -12,6 +12,7 @@ namespace SimpleCalculator
         static void Main(string[] args)
         {
             int counter = 1;
+            StackStorage mathStack = new StackStorage();
 
             while (true)
             {
@@ -19,12 +20,32 @@ namespace SimpleCalculator
 
                 string Command = Console.ReadLine();
 
+                if (Command.ToLower() == "quit" || Command.ToLower() == "exit")
+                {
+                    Environment.Exit(0);
+                }
+                else if ( Command == "last")
+                {
+                    Command = mathStack.getLastProblem();
+                }
+                else if (Command == "lastq")
+                {
+                    Console.WriteLine("last problem was " + mathStack.getLastProblem());
+                }
+                
+                //initalize regex expression
                 Expression expression = new Expression();
                 expression.VerifyExpression(Command);
                 int firstNum = expression.FirstNum;
                 int secondNum = expression.SecondNum;
                 string Operator = expression.Operator;
 
+                string userMathExpression = (firstNum + Operator + secondNum).ToString();
+
+                //adds the user input into addMathToStack and makes it a string
+                mathStack.addMathToStack(userMathExpression);
+                
+                //switch statement for calculations
                 switch (Operator)
                 {
                     case "+":

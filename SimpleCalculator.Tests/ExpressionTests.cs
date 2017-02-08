@@ -17,7 +17,6 @@ namespace SimpleCalculator.Tests
 
        [TestMethod]
         public void CanCheckInput()
-
         {
             Expression testExpression = new Expression();
             string testPattern = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
