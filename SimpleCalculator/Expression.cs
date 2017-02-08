@@ -10,7 +10,7 @@ namespace SimpleCalculator
     public class Expression
     {
 
-        string testPattern = @"^\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
+        string testPattern = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
 
         public void StringSplitter(string UserInput)
         {
@@ -75,7 +75,7 @@ namespace SimpleCalculator
 
         public void VerifyExpression(string userInput)
         {
-            string expressionString = @"^\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
+            string expressionString = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
             Regex regExString = new Regex(expressionString);
 
             Match match = regExString.Match(userInput);

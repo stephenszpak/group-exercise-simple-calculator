@@ -20,8 +20,7 @@ namespace SimpleCalculator.Tests
         public void CanCheckInput()
         {
             Expression testExpression = new Expression();
-            string testPattern = @"^\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
-            Regex Regex = new Regex(testPattern);
+            string testPattern = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
 
             string test1 = "1+1";
             string test2 = "2 + 2";
