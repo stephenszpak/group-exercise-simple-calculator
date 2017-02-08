@@ -20,15 +20,23 @@ namespace SimpleCalculator.Tests
 
         {
             Expression testExpression = new Expression();
-            string testPattern = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
+            string testPattern = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
             Regex Regex = new Regex(testPattern);
 
             string test1 = "1+1";
             string test2 = "2 + 2";
+            string test3 = "nah, bro";
+            string test4 = "2 *4";
+            string test5 = "1 %2";
+            string test6 = "1  /  4";
 
 
             Assert.IsTrue(Regex.IsMatch(test1));
             Assert.IsTrue(Regex.IsMatch(test2));
+            Assert.IsFalse(Regex.IsMatch(test3));
+            Assert.IsTrue(Regex.IsMatch(test4));
+            Assert.IsTrue(Regex.IsMatch(test5));
+            Assert.IsTrue(Regex.IsMatch(test6));
         }
     }
 }
