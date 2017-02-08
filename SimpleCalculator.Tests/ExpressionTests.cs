@@ -15,7 +15,7 @@ namespace SimpleCalculator.Tests
             Assert.IsNotNull(expression);
         }
 
-        [TestMethod]
+       [TestMethod]
         public void CanCheckInput()
         {
             Expression testExpression = new Expression();
