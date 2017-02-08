@@ -10,7 +10,7 @@ namespace SimpleCalculator
     public class Expression
     {
 
-        string testPattern = @"\b(?<FirstNum>\d+)\s*\b(?<Operator>[\+\/\-\+\%])\s*\b(?<SecondNum>\d+)";
+        string testPattern = @"^\b(?<FirstNum>\d+)\s*(?<Operator>[\+\/\-\*\%])\s*\b(?<SecondNum>\d+)";
 
         public void StringSplitter(string UserInput)
         {
@@ -26,6 +26,10 @@ namespace SimpleCalculator
                 Console.WriteLine("input is invalid");
             }
         }
+
+
+        private readonly object opr;
+
 
         public string Operator { get; set; }
         public int FirstNum { get; set; }
