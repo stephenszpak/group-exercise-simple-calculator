@@ -37,5 +37,20 @@ namespace SimpleCalculator.Tests
             Assert.IsTrue(Regex.IsMatch(test5));
             Assert.IsTrue(Regex.IsMatch(test6));
         }
+
+        [TestMethod]
+        public void CanCheckForConstant()
+        {
+            Expression constantExpression = new Expression();
+            string constantPattern = @"^\b(?<ConstKey>[a-z])\s*(?<Equals>[=])\s*\b(?<ConstValue>\d+)";
+            Regex constRegEx = new Regex(constantPattern);
+
+            string test1 = "a=1";
+            string test2 = "3+2";
+
+            Assert.IsTrue(constRegEx.IsMatch(test1));
+            Assert.IsFalse(constRegEx.IsMatch(test2));
+
+        }
     }
 }
