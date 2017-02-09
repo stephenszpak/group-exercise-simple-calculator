@@ -13,6 +13,7 @@ namespace SimpleCalculator
         {
             int counter = 1;
             StackStorage mathStack = new StackStorage();
+            ConstantStorage varStore = new ConstantStorage();
 
             while (true)
             {
@@ -41,6 +42,12 @@ namespace SimpleCalculator
                 string Operator = expression.Operator;
 
                 string userMathExpression = (firstNum + Operator + secondNum).ToString();
+
+                string constant = expression.Constant;
+                string equals = expression.ConstantEquals;
+                int value = expression.Value;
+
+                string constantExpression = (constant + equals + value).ToString();
 
                 //adds the user input into addMathToStack and makes it a string
                 mathStack.addMathToStack(userMathExpression);

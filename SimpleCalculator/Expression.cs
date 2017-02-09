@@ -43,10 +43,10 @@ namespace SimpleCalculator
                 ConstantEquals = constMatch.Groups["Equals"].Value;
                 Value = int.Parse(constMatch.Groups["ConstValue"].Value);
             }
-            else
-            {
-                Console.WriteLine("That isn't a valid expression. Please try again.");
-            }
+            //else
+            //{
+            //    Console.WriteLine("That isn't a valid expression. Please try again.");
+            //}
         }
 
     }
