@@ -12,5 +12,6 @@ namespace SimpleCalculator.Tests
             ConstantStorage constant = new ConstantStorage();
             Assert.IsNotNull(constant);
         }
+
     }
 }
